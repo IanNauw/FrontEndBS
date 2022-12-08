@@ -25,3 +25,5 @@ jobs:
           dockerfile: Dockerfile
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
+      - name: webhook
+        run: curl -X POST ${{ secrets.WEBHOOK_URL }}
